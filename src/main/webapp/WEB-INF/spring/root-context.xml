@@ -10,7 +10,7 @@
 	<context:component-scan base-package="com.mydomain" />
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-<!-- 	<import resource="classpath:spring/spring-security.xml" /> -->
+	<import resource="classpath:spring/spring-security.xml" />
 
 	<!-- Import Beans -->
 	<!-- <import resource="classpath:spring/hibernateBeans.xml" /> -->
