@@ -19,7 +19,7 @@ import com.mydomain.model.User;
 @Repository
 public class UserDao {
 
-	public User findByUsername(final String username) {
+	public User loadUserByUsername(final String username) {
 		User user = new User();
 		user.setFirstName("firstName");
 		user.setLastName("lastName");

@@ -1,6 +1,8 @@
 package com.mydomain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,13 +20,14 @@ import com.mydomain.model.User;
  */
 @Service
 @Transactional
-public class UserService {
+public class UserService implements UserDetailsService {
 
 	@Autowired
 	private UserDao userDao;
 
-	public User findByUsername(final String username) {
-		return userDao.findByUsername(username);
+	@Override
+	public User loadUserByUsername(final String username) throws UsernameNotFoundException {
+		return userDao.loadUserByUsername(username);
 	}
 
 }
