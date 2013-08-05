@@ -9,6 +9,11 @@
 	<http auto-config="true" use-expressions="true">
 		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
 		<logout logout-url="/logout" />
+		<!-- <form-login login-processing-url="/login" -->
+		<!-- username-parameter="username" -->
+		<!-- password-parameter="password" -->
+		<!-- login-page="/login.html" -->
+		<!-- /> -->
 	</http>
 
 	<authentication-manager alias="authenticationManager">
