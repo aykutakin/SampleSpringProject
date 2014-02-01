@@ -7,9 +7,10 @@
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
+	<!-- Scan for components under this package -->
 	<context:component-scan base-package="com.mydomain" />
 
-	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- Import spring security configurations -->
 	<import resource="classpath:spring/spring-security.xml" />
 
 	<!-- Import Beans -->
