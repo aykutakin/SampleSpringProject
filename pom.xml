@@ -9,9 +9,9 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<spring.version>3.2.3.RELEASE</spring.version>
-		<spring.security.version>3.1.4.RELEASE</spring.security.version>
-		<jack.version>1.9.12</jack.version>
+		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.security.version>3.2.0.RELEASE</spring.security.version>
+		<jack.version>1.9.13</jack.version>
 		<jdk.version>1.7</jdk.version>
 	</properties>
 
@@ -60,7 +60,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
+				<version>3.1</version>
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>

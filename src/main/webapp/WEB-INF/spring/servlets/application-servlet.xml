@@ -4,22 +4,22 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans     
-	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 	http://www.springframework.org/schema/mvc
-    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 	http://www.springframework.org/schema/context 
-	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<!-- Scan for components under this package -->
 	<context:component-scan base-package="com.mydomain" />
+
+    <!-- Ensures that any resource requests not handled by Spring MVC mappings will be delegated back to the Servlet container -->
+    <mvc:default-servlet-handler />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<mvc:resources mapping="/js/**" location="/assets/js/" />
 	<mvc:resources mapping="/css/**" location="/assets/css/" />
 	<mvc:resources mapping="/images/**" location="/assets/images/" />
 	<mvc:resources mapping="/**" location="/htmls/" />
-
-	<!-- Enables the Spring MVC @Controller programming model -->
-	<mvc:annotation-driven />
 
 </beans>
